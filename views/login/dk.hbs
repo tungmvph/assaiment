@@ -1,0 +1,50 @@
+  {{!-- <nav class="navbar navbar-inverse navbar-custom">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" >ADMIN</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+         <li><a href="/sp/list">Home</a></li>
+        <li><a href="/sp">Product</a></li>
+        <li><a href="/us/list">Acount</a></li>
+        </ul>
+      
+         <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a onclick="loginSuccess()" href="/"><span class="glyphicon
+              glyphicon-log-in"></span> Login</a></li>
+      </ul>
+      </div>
+    </div>
+  </nav>
+
+<h3>
+   {{viewTile}}
+</h3>
+
+<form method="POST" action="/add" autocomplete="off">
+        <input type="hidden" value="{{us._id}}" name="id">
+ <div class="form-group">
+        <label for="productName">Email: </label>
+        <input type="email" class="form-control" value="{{us.Email}}" name="Email" required>
+    </div>
+    <div class="form-group">
+        <label for="productName">Pasword </label>
+        <input type="text" class="form-control" value="{{us.Pas}}" name="Pas" required>
+    </div>
+    <div class="form-group">
+        <label for="productName">name: </label>
+        <input type="text" class="form-control" value="{{us.Name}}" name="Name" required min="1">
+    </div>
+   
+    <div class="modal-footer">
+        <button type="submit" class="btn btn-primary"> SUbmit </button>
+          <a href="/us/list" class="btn btn-primary"> Danh sachs</a>
+    </div>
+</form> --}}

@@ -1,0 +1,76 @@
+  <nav class="navbar navbar-inverse navbar-custom">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" >ADMIN</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+         <li><a href="/sp/list">Home</a></li>
+        <li class="active"><a href="/sp">Product</a></li>
+        <li><a href="/us/list">Acount</a></li>
+        </ul>
+      
+         <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a onclick="loginSuccess()" href="/"><span class="glyphicon
+              glyphicon-log-in"></span> Login</a></li>
+      </ul>
+      </div>
+    </div>
+  </nav>
+
+<h3>
+   {{viewTile}}
+</h3>
+
+<form method="POST" action="/sp/add" autocomplete="off">
+        <input type="hidden" value="{{sp._id}}" name="id">
+ <div class="form-group">
+        <label for="productName">Masp: </label>
+        <input type="text" class="form-control" value="{{sp.Masp}}" name="Masp" required>
+    </div>
+    <div class="form-group">
+        <label for="productName">Tên: </label>
+        <input type="text" class="form-control" value="{{sp.Name}}" name="Name" required>
+    </div>
+    <div class="form-group">
+        <label for="productName">Gia: </label>
+        <input type="number" class="form-control" value="{{sp.Gia}}" name="Gia" required min="1">
+    </div>
+    <div class="form-group">
+          <label for="productType">Mau Sac</label>
+          <select class="form-control" value="{{sp.Mausac}}" id="Mausac" name="Mausac">
+            <option>xanh</option>
+            <option>do</option>
+            <option>tim</option>
+            <option>vang</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="productType">Loại sản phẩm</label>
+          <select class="form-control" id="Loai" value="{{sp.Loai}}" name="Loai">
+            <option>Quần jean</option>
+            <option>Áo Phông</option>
+            <option>Quần đùi</option>
+            <option>Áo sơ mi</option>
+          </select>
+        </div>
+         <div class="form-group">
+        <label for="productName">Makh: </label>
+        <input type="text" class="form-control" value="{{sp.Makh}}" name="Makh" required>
+    </div>
+     <div class="form-group">
+        <label for="productName">Tênkh: </label>
+        <input type="text" class="form-control" value="{{sp.Tenkh}}" name="Tenkh" required>
+    </div>
+
+    <div class="modal-footer">
+        <button type="submit" class="btn btn-primary"> SUbmit </button>
+          <a href="/sp/list" class="btn btn-primary"> Danh sachs</a>
+    </div>
+</form>
